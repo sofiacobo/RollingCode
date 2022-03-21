@@ -35,4 +35,24 @@ const multiplicar = function(){
         console.log(`${i}) ${num*i}`);
     }
 }
-multiplicar();
+// multiplicar();
+
+// Definir una función que muestre información sobre una cadena de texto que se
+// le pasa como argumento. A partir de la cadena que se le pasa, la función
+// determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o
+// por una mezcla de ambas.
+
+function infoCadena(cadena) {
+    if(cadena == cadena.toUpperCase()) {
+      console.log(`La cadena "${cadena}" está formada solo por mayúsculas`);
+    }
+    else if(cadena == cadena.toLowerCase()) {
+      console.log(`La cadena "${cadena}" está formada solo por minúsculas`);
+    }
+    else {
+      console.log(`La cadena "${cadena}" está formada por minúsculas y mayúsculas`);
+    }
+  }
+  
+let cadena1 = prompt("Ingrese una cadena de texto: ");
+infoCadena(cadena1);
