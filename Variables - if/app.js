@@ -8,8 +8,8 @@
 // document.write(3+5);
 
 // //Ejercicio 4
-let nombre = prompt("Escriba un nombre") 
-document.write("Hola "+nombre);
+// let nombre = prompt("Escriba un nombre") 
+// document.write("Hola "+nombre);
 
 // //Ejercicio 5
 // let number1 = prompt("Escriba un número: ");
@@ -34,6 +34,34 @@ document.write("Hola "+nombre);
 // else{
 //     document.write("El número no es divisible por 2");
 // }
+
+//Ejercicio 9
+ let frase = prompt("Ingrese una frase");
+ let vocales = "aeiou";
+ let i = 0; 
+ let j = 0;
+ let contaVocal = 0;
+
+ frase = frase.toLowerCase();
+ do {
+//     if(frase.charAt(i) == "a" || frase.charAt(i) == "e" || frase.charAt(i) == "i" || frase.charAt(i) == "o" || frase.charAt(i) == "u"){
+//         contaVocal ++
+//         console.log(frase.charAt(i))
+//     }; 
+    console.log(frase[i]);
+    do {
+        if (frase.substr(i,1) == vocales.substr(j,1)) {
+            contaVocal++;
+            console.log(`SI coincide con ${vocales.substr(j,1)}`);
+        }
+        else console.log(`No coincide con ${vocales[j]}`)
+        j++;
+    } while (vocales.length > j);
+        j = 0;
+        i++;
+ } while (frase.length > i);
+ document.write(`La cantidad de vocales es: ${contaVocal}`);
+
 
 // Ejercicio 10
 // let number = prompt("Escriba un número: ");
