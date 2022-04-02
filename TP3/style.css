@@ -1,0 +1,24 @@
+*{
+  margin: 0px;
+  padding: 0px 10px 10px 10px;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+.exercise{
+    padding: 5px;
+    background-color: grey;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.title{
+    padding: 5px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+}
