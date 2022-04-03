@@ -23,10 +23,14 @@
     text-transform: uppercase;
 }
 
-.nro-only{
+.textField{
   outline-color: green;
 }
 
-.nro-only:invalid{
+.textField:invalid{
   outline-color: red;
+}
+
+.result-text-field{
+  color: blue;
 }

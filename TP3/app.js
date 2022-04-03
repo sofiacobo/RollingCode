@@ -62,3 +62,27 @@ inputNumber.addEventListener("keypress", (e) =>{ //e es el elemento que esta des
     }
 })
 
+//Ejercicio 2
+const infoString = (cadena)=>{
+    let result;
+    if(cadena == cadena.toUpperCase()) {
+      return result = `La cadena "${cadena}" está formada solo por mayúsculas`;
+    }
+    else if(cadena == cadena.toLowerCase()) {
+      return result = `La cadena "${cadena}" está formada solo por minúsculas`;
+    }
+    else {
+      return result = `La cadena "${cadena}" está formada por minúsculas y mayúsculas`;
+    }
+  }
+
+let textStringHTML = document.getElementById('textString');
+let resultTextHTML = document.getElementById('resultText');
+
+textStringHTML.addEventListener("keypress", (e)=>{
+    if(e.key==='Enter' && e.target.validity.valid){
+        let userInput = textStringHTML.value;
+        let result = infoString(userInput);
+        resultTextHTML.innerHTML = result;
+    }
+})
