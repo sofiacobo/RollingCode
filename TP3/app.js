@@ -36,3 +36,29 @@ let listValues = dicesValues.map(({dice1, dice2, sumDices}) =>
 listDices.innerHTML = listValues.join("");
 
 //Funciones
+//Ejercicio 1
+const parImpar = (number)=>{
+    let result="";
+    if(number%2==0){
+        result = `El número ${number} es par`;
+    }else{
+        result = `El número ${number} es impar`;
+    }
+    return result;
+}
+
+let inputNumber = document.querySelector("#nro-odd-even"); //traemos con querySelector del DOM donde el user ingresa el nro
+let captionResult = document.querySelector("#fex1 #result"); //traemos el p del DOM
+
+// captionResult.innerText = "Este es el resultado";
+
+inputNumber.addEventListener("keypress", (e) =>{ //e es el elemento que esta desencadenando el evento
+    if(e.key==='Enter' && e.target.validity.valid){
+        let userInput = Number(inputNumber.value);
+        let result = parImpar(userInput);
+        captionResult.innerText = result;
+    }else{
+        captionResult.innerText = `${inputNumber.value} no es una entrada válida`;
+    }
+})
+

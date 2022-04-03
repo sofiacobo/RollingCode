@@ -22,3 +22,11 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+.nro-only{
+  outline-color: green;
+}
+
+.nro-only:invalid{
+  outline-color: red;
+}
