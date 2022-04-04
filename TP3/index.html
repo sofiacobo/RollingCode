@@ -52,8 +52,22 @@
         por minúsculas o por una mezcla de ambas.
       </article>
       <label for="textString">Ingrese un texto: </label>
-      <input type="text" name="textString" id="textString" class="textField">
+      <input type="text" name="textString" id="textString" class="textField" pattern="[a-z]{1,}">
       <p id="resultText" class="result-text-field"></p>
+    </section>
+
+    <section id="fex3">
+      <article class="exercise">
+        3- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo,
+        luego crear una función para calcular su perímetro y mostrarlo por pantalla.
+      </article>
+      <h4>Ingreso de medidas (en cm)</h4>
+      <label for="anchoRectangulo">Ingrese el ancho</label>
+      <input type="text" name="anchoRectangulo" id="ancho-rec" class="textField"> 
+      <label for="altoRectangulo">Ingrese el alto</label>
+      <input type="text" name="altoRectangulo" class="textField" id="alto-rec" >
+      <button id="calculate">Calcular perímetro</button>
+      <p id="resultCalculate" class="result-text-field"></p>
     </section>
 
     <script src="./app.js"></script>

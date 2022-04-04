@@ -86,3 +86,22 @@ textStringHTML.addEventListener("keypress", (e)=>{
         resultTextHTML.innerHTML = result;
     }
 })
+
+//Ejercicio 3
+const perimetro = (alto,ancho)=>{
+    let perimetro = 2*(Number(alto) + Number(ancho));
+    let result = `El perimetro del rectangulo es ${perimetro}`;
+    return result;
+}
+
+let anchoHTML = document.getElementById('ancho-rec');
+let altoHTML = document.getElementById('alto-rec');
+let btnCalculate = document.getElementById('calculate');
+let resultHTML = document.getElementById('resultCalculate');
+
+btnCalculate.addEventListener("click", ()=>{
+    let userInput = anchoHTML.value;
+    let userInput1 = altoHTML.value;
+    let result = perimetro(userInput,userInput1);
+    resultHTML.innerText = result;
+})
