@@ -20,10 +20,12 @@ class Producto{
 }
 
 let arrayProductos = [];
-let producto1 = new Producto(001, "Mouse", 1250);
-let producto2 = new Producto(002, "Impresora", 43000);
-let producto3 = new Producto(003, "Pendrive", 850);
+let producto1 = new Producto(101, "Mouse", 1250);
+let producto2 = new Producto(102, "Impresora", 43000);
+let producto3 = new Producto(103, "Pendrive", 850);
 arrayProductos.push(producto1);
 arrayProductos.push(producto2);
 arrayProductos.push(producto3);
-
+arrayProductos.map(function(item){
+  item.imprimeDatos();
+})
