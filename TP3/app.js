@@ -53,7 +53,7 @@ let captionResult = document.querySelector("#fex1 #result"); //traemos el p del 
 // captionResult.innerText = "Este es el resultado";
 
 inputNumber.addEventListener("keypress", (e) =>{ //e es el elemento que esta desencadenando el evento
-    if(e.key==='Enter' && e.target.validity.valid){
+    if(e.key && e.target.validity.valid){  //e.key=='Enter'
         let userInput = Number(inputNumber.value);
         let result = parImpar(userInput);
         captionResult.innerText = result;
@@ -80,10 +80,11 @@ let textStringHTML = document.getElementById('textString');
 let resultTextHTML = document.getElementById('resultText');
 
 textStringHTML.addEventListener("keypress", (e)=>{
-    if(e.key==='Enter' && e.target.validity.valid){
+    if(e.key && e.target.validity.valid){
         let userInput = textStringHTML.value;
         let result = infoString(userInput);
         resultTextHTML.innerHTML = result;
+        console.log(e)
     }
 })
 

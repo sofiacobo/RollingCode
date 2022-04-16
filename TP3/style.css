@@ -31,6 +31,10 @@
   outline-color: red;
 }
 
+.textField1{
+  outline-color: green;
+}
+
 .result-text-field{
   color: blue;
 }
