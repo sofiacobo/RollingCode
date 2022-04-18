@@ -86,3 +86,13 @@
   font-size: 15px;
   display: block;
 }
+
+/*Ejercicio 5 - Cronometro*/
+.btn-cron{
+  margin: 10px;
+}
+
+.font-cron{
+  font-size: 40px;
+  font-weight: bold;
+}
