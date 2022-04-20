@@ -189,15 +189,7 @@ let almacenarTiempos = document.getElementById('almacenarTiempos');
 let tiempo = 0, intervalo = 0;
 let verificador = false;
 
-init();
-
-function init() {
-    iniciar.addEventListener('click', iniciarContador);
-    resetear.addEventListener('click', resetearContador);
-    grabar.addEventListener('click', grabarContador);
-}
-
-function iniciarContador() {
+const iniciarContador = () => {
     if (verificador == false) {
         intervalo = setInterval(function () {
             tiempo += 0.01;
@@ -210,7 +202,7 @@ function iniciarContador() {
     }
 }
 
-function resetearContador() {
+const resetearContador = () => {
     verificador = false;
     tiempo = 0;
     temporizador.innerHTML = tiempo + '.00';
@@ -220,7 +212,7 @@ function resetearContador() {
     }
 }
 
-function grabarContador() {
+const grabarContador = () => {
     if (temporizador.textContent === '0.00') {
         console.log('click en el botón iniciar')
     }
@@ -232,3 +224,11 @@ function grabarContador() {
         almacenarTiempos.appendChild(p);
     }
 }
+
+const init = () => {
+    iniciar.addEventListener('click', iniciarContador);
+    resetear.addEventListener('click', resetearContador);
+    grabar.addEventListener('click', grabarContador);
+}
+
+init();
