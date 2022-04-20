@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
     <h3 class="title">Ejercicios DOM y BOM</h3>
@@ -38,6 +39,69 @@
       <div class="container">
         <p id="resultGame" class="result-text-field">este es un texto de ejemplo</p>
       </div>
+    </section>
+
+    <section>
+      <div class="container-ex">
+        <h5>Ejercicio 2</h5>
+        <p>Crea una clase llamada Persona que siga las siguientes condiciones:
+          Sus propiedades son: nombre, edad, DNI, sexo (H hombre, M mujer), peso y altura,
+          año de nacimiento. Si quieres añadir alguna propiedad extra puedes hacerlo.
+          Los métodos que se debe poder utilizar son:
+          mostrarGeneracion: este método debe mostrar un mensaje indicando a qué
+          generación pertenece la persona creada y cual es el rasgo característico de esta
+          generación.
+          Para realizar este método tener en cuenta la siguiente tabla de generaciones:
+          esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la
+          persona es mayor de edad.
+          mostrarDatos: devuelve toda la información del objeto.
+          Luego crea la interfaz necesaria para que el usuario pueda crear un objeto
+          persona, permitiendo ingresar las propiedades mediante un formulario, también
+          agregar los botones “mostrar generación”, es “mayor de edad” e indicar en un alert
+          el resultado de la función correspondiente.</p>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center my-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ingresa tus datos</h5>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control"  value="" id="nombre" >
+    
+              <label for="edad" class="form-label">Edad</label>
+              <input type="number" class="form-control"  value="" id="edad" >
+    
+              <label for="dni" class="form-label">Dni</label>
+              <input type="number" class="form-control"  value="" id="dni" >
+    
+              <label for="sexo" class="form-label">Sexo</label>
+              <select class="form-select" id="sexo" aria-label="Default select example">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="undefined">Prefiero no decirlo</option>
+              </select>
+    
+              <label for="peso" class="form-label">Peso</label>
+              <input type="number" class="form-control"  value="" id="peso" >
+    
+              <label for="altura" class="form-label">Altura</label>
+              <input type="number" class="form-control"  value="" id="altura" >
+    
+              <label for="año" class="form-label">Año de nacimiento</label>
+              <input type="number" class="form-control"  value="" id="año" >
+    
+              <button class="btn btn-danger mt-5" onclick="generarPersona()" >Crear persona</button>
+              <button class="btn btn-danger mt-5" onclick="ejecutar('mostrarGen')" >Mostrar generación</button>
+              <button class="btn btn-danger mt-5" onclick="ejecutar('esMayor')" >Mayor de edad</button>
+              <button class="btn btn-danger mt-5" onclick="ejecutar('generarId')" >Generar ID</button>
+              <button class="btn btn-danger mt-5" onclick="ejecutar('mostrarDatos')" >Mostrar datos</button>  
+    
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </section>
 
     <section>
@@ -81,7 +145,7 @@
           <div class="row">
               <div class="col">
                   <div>
-                      <h1>Cronómetro</h1>
+                      <h1 class="d-flex justify-content-center">Cronómetro</h1>
                       <p id="temporizador" class="d-flex justify-content-center font-cron">0.00</p>
                   </div>
                   <div class="btn-group d-flex justify-content-center" role="group">

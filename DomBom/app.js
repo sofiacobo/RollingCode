@@ -34,6 +34,92 @@ btnStart.addEventListener("click", (e)=>{
   // }
 })
 
+//Ejercicio 2 - Personas
+class Persona{  
+constructor(nombre, edad, dni, sexo, peso, altura, añoNacimiento) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.dni = dni;
+    this.sexo = sexo;
+    this.peso = peso;
+    this.altura = altura;
+    this.añoNacimiento = añoNacimiento;
+  }
+  mostrarGen () {
+    switch (true) {
+      case ( this.añoNacimiento >= 1930 && this.añoNacimiento <= 1948 ):
+        swal(`${this.nombre} pertenece a la generación "Silent" \n
+        Su rasgo caracteristico es "AUSTERIDAD"`)
+        break;
+      case ( this.añoNacimiento >= 1949 && this.añoNacimiento <= 1968 ):
+        swal(`${this.nombre} pertenece a la generación "Baby Boom" \n
+        Su rasgo caracteristico es "Ambición"`)
+        break;
+      case ( this.añoNacimiento >= 1969 && this.añoNacimiento <= 1980 ):
+        swal(`${this.nombre} pertenece a la generación "Gen X" \n
+        Su rasgo caracteristico es "Obsesión por el éxito"`)
+        break;
+      case ( this.añoNacimiento >= 1981 && this.añoNacimiento <= 1993 ):
+        swal(`${this.nombre} pertenece a la generación "Gen Y (Millenials)" \n
+        Su rasgo caracteristico es "Frustración"`)
+        break;
+      case ( this.añoNacimiento >= 1994 && this.añoNacimiento <= 2010 ):
+        swal(`${this.nombre} pertenece a la generación "Gen Z" \n
+        Su rasgo caracteristico es "Irreverencia"`)
+      break;
+
+      default:
+        swal("no perteneces a nada viejo")
+        break;
+    }
+  }
+
+  esMayor () {
+    if (this.edad >= 18) {
+      swal("Eres mayor de edad")
+    } else {
+      swal("No eres mayor de edad")
+    }
+  }
+
+  mostrarDatos () {
+    swal(`DATOS PERSONALES \n
+    Nombre: ${this.nombre}. \n
+    Edad: ${this.edad}. \n
+    DNI: ${this.dni}. \n
+    Sexo: ${this.sexo}. \n
+    Peso: ${this.peso}. \n
+    Altura: ${this.altura}. \n
+    Año de Nacimiento: ${this.añoNacimiento}.`,{
+      button: "Gracias!"
+    });
+  }
+  
+  generarId () {
+    this.dni = Math.round(Math.random() * 100000000);
+    swal('ID generado','','success');
+  }
+}
+
+let persona1 = null;
+
+const generarPersona = () => {
+  let nombre = document.getElementById("nombre").value,
+  edad = document.getElementById("edad").value,
+  sexo = document.getElementById("sexo").value,
+  dni = document.getElementById("dni").value,
+  peso = document.getElementById("peso").value,
+  altura = document.getElementById("altura").value,
+  año = document.getElementById("año").value;
+  
+  persona1 = new Persona(nombre, edad, dni, sexo, peso, altura, año);
+  swal('Persona creada','','success');
+}
+
+const ejecutar = (method) => {
+  persona1[method]();
+}
+
 
 //Ejercicio 4 - Reloj
 let pHoras = document.getElementById('horas');
@@ -145,5 +231,4 @@ function grabarContador() {
     `;
         almacenarTiempos.appendChild(p);
     }
-
 }

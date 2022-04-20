@@ -41,6 +41,17 @@
   outline-color: red;
 }
 
+/*Ejercicio 2 - Persona*/
+.card{
+  background-color: #fffbd5;
+}
+
+.card-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /*Ejercicio 4 - Reloj*/
 .wrap{
   width: 90%;
