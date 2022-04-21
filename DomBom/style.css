@@ -42,7 +42,7 @@
 }
 
 /*Ejercicio 2 - Persona*/
-.card{
+.card-datos{
   background-color: #fffbd5;
 }
 
@@ -50,6 +50,14 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+/*Ejercicio 3 - Lista de tareas*/
+.contenedor-lista{
+  border-color: #b20a2c;
+  border-radius: 5px;
+  background-color: rgba(66, 66, 66, 0.336);
+  padding: 15px;
 }
 
 /*Ejercicio 4 - Reloj*/

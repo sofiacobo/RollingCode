@@ -120,6 +120,59 @@ const ejecutar = (method) => {
   persona1[method]();
 }
 
+//Ejercicio 5 - Lista de tareas
+// let listaTareas = document.getElementById('lista');
+
+// const crearLista = (texto) =>{
+//   let contenedor = document.createElement('div');
+
+//   let cardTarea = `
+//     <div class="card mt-2 card-list">
+//     <div class="card-body d-flex justify-content-between align-items-center">
+//     ${texto.toUpperCase()}
+//     <button class="btn btn-outline-danger">X</button>
+
+//     </div>
+//     </div>
+//   `;
+
+//   contenedor.innerHTML = cardTarea;
+//   listaTareas.appendChild(contenedor);
+//   document.getElementById('textTarea').value = "";
+// }
+
+// const addItemList = (e) =>{
+//   e.preventDefault();
+//   let texto = document.getElementById('textTarea').value;
+//   tareas.push(texto);
+
+//   crearLista(texto);
+// }
+
+
+let btnAdd = document.getElementById('btn-agregar');
+let listaTareas = [];
+
+btnAdd.addEventListener('click',()=>{
+  let tarea = document.getElementById('textTarea').value;
+  listaTareas.push(tarea);
+  console.log(listaTareas);
+  let contenedor = document.createElement("div");
+
+  let cardTarea = `
+    <div class="card my-2 card-list">
+      <div class="card-body d-flex justify-content-between align-items-center">
+        ${tarea.toUpperCase()}
+        <button class="btn btn-outline-danger">X</button>
+      </div>
+    </div>
+  `;
+
+  contenedor.innerHTML = cardTarea;
+  document.querySelector("#lista").appendChild(contenedor);
+
+  document.getElementById('textTarea').value = "";
+})
 
 //Ejercicio 4 - Reloj
 let pHoras = document.getElementById('horas');
