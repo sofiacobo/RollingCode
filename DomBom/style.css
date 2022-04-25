@@ -53,11 +53,59 @@
 }
 
 /*Ejercicio 3 - Lista de tareas*/
-.contenedor-lista{
-  border-color: #b20a2c;
-  border-radius: 5px;
-  background-color: rgba(66, 66, 66, 0.336);
+input {
+  padding: 5px;
+  outline: none;
+  width: 250px;
+}
+
+.li-container {
+  background-color: white;
+  width: 100%;
+  color: darkslategray;
+  margin-top: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+li p {
+  margin: 0;
   padding: 15px;
+  width: 100%;
+}
+
+.btn-delete {
+  margin-left: auto;
+  border: none;
+  background-color: #e31746;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  outline: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 10%;
+  font-size: 1.2em;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background-color: rgb(25, 109, 105);
+}
+
+.btn-agregar:hover {
+  cursor: pointer;
+  background-color: rgb(25, 109, 105);
 }
 
 /*Ejercicio 4 - Reloj*/

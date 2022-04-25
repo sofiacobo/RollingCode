@@ -112,15 +112,33 @@
           cada elemento ingresado en la lista debe poder ser eliminado con un botón creado
           para ese fin.</p>
       </div>
-
       <div class="container">
+        
+        <div id="lista" class="contenedor-lista">
+          <h5>Lista de Tareas</h5>
+              <input type="text" name="tarea" id="textTarea" placeholder="Escriba una tarea">
+              <button class="btn btn-danger btn-agregar" id="btn-agregar">Agregar</button>
+            <div class="li-container">
+              <ul id="ul">
+                  
+              </ul>
+            </div>
+
+            <div class="empty" id="empty">
+              <p>No tienes tareas pendientes.</p>
+          </div>
+        </div>
+        
+        
+    </div>
+      <!-- <div class="container">
         <div id="lista" class="contenedor-lista">
           <h5 class="d-flex justify-content-center">Lista de tareas</h5>
           <input type="text" name="tarea" id="textTarea" placeholder="Escriba una tarea">
           <button class="btn btn-danger" id="btn-agregar">Agregar</button>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section>
       <div class="container-ex">
@@ -159,6 +177,7 @@
         <p>Realizar una web con un cronómetro, que tenga las opciones de iniciar, reset
           (volver el cronómetro a 0) y pausar.
         </p>
+      </div>
         <div class="container">
           <div class="row">
               <div class="col">
@@ -180,7 +199,7 @@
               </div>
           </div>
       </div>
-      </div>
+
     </section>
 
     <script

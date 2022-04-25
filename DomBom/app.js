@@ -120,46 +120,79 @@ const ejecutar = (method) => {
   persona1[method]();
 }
 
-//Ejercicio 5 - Lista de tareas
+//Ejercicio 3 - Lista de tareas
 
-let btnAdd = document.getElementById('btn-agregar');
-let listaTareas = [];
+// let btnAdd = document.getElementById('btn-agregar');
+// let listaTareas = [];
 
-const addTarea = () =>{
-  btnAdd.addEventListener('click',()=>{
-    if(document.getElementById('textTarea').value != ""){
-      let tarea = document.getElementById('textTarea').value;
-      listaTareas.push(tarea);
-      console.log(listaTareas);
-      let contenedor = document.createElement("div");
+// const addTarea = () =>{
+//   btnAdd.addEventListener('click',()=>{
+//     if(document.getElementById('textTarea').value != ""){
+//       let tarea = document.getElementById('textTarea').value;
+//       listaTareas.push(tarea);
+//       console.log(listaTareas);
+//       let contenedor = document.createElement("div");
   
-      let cardTarea = `
-        <div class="card my-2 card-list">
-          <div class="card-body d-flex justify-content-between align-items-center">
-            ${tarea.toUpperCase()}
-            <button class="btn btn-outline-danger" id="btn-remove">X</button>
-          </div>
-        </div>
-      `;
+//       let cardTarea = `
+//         <div class="card my-2 card-list">
+//           <div class="card-body d-flex justify-content-between align-items-center">
+//             ${tarea.toUpperCase()}
+//             <button class="btn btn-outline-danger" id="btn-remove">X</button>
+//           </div>
+//         </div>
+//       `;
   
-      contenedor.innerHTML = cardTarea;
-      document.querySelector("#lista").appendChild(contenedor);
-      document.getElementById('textTarea').value = "";
-    }else{
-      swal("Debe ingresar una tarea");
-    }
-  })
-}
-
-// let btnRemove = document.getElementById('btn-remove');
-
-// const removeTarea = () =>{
-//   btnRemove.addEventListener('click', ()=>{
-
+//       contenedor.innerHTML = cardTarea;
+//       document.querySelector("#lista").appendChild(contenedor);
+//       document.getElementById('textTarea').value = "";
+//     }else{
+//       swal("Debe ingresar una tarea");
+//     }
 //   })
 // }
+let input = document.getElementById("textTarea");
+let addBtn = document.getElementById("btn-agregar");
+let ul = document.getElementById("ul");
+let empty = document.getElementById("empty");
 
-addTarea();
+addBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const text = input.value;
+
+  if (text !== "") {
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    p.innerText = text;
+
+    li.appendChild(p);
+    li.appendChild(addDeleteBtn());
+    ul.appendChild(li);
+
+    input.value = "";
+    empty.style.display = "none";
+  }
+});
+
+function addDeleteBtn() {
+  const deleteBtn = document.createElement("button");
+
+  deleteBtn.innerText = "X";
+  deleteBtn.className = "btn-delete";
+
+  deleteBtn.addEventListener("click", (e) => {
+    const item = e.target.parentElement;
+    ul.removeChild(item);
+
+    const items = document.querySelectorAll("li"); //selecciona todos los elementos li
+
+    if (items.length === 0) {
+      empty.style.display = "block";
+    }
+  });
+
+  return deleteBtn;
+}
 
 //Ejercicio 4 - Reloj
 let pHoras = document.getElementById('horas');
